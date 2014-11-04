@@ -1,0 +1,74 @@
+html, body {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: #2C2D2F;
+    font-family: serif;
+    width: 100%;
+}
+/* start main container playing looping viedo */
+video#bgvid {
+    position: fixed;
+    top:1px;
+    right: 0;
+    bottom: 0;
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    z-index: -100;
+    background: url(polina.jpg) no-repeat;
+    background-size: cover;
+}
+/* end of main container playing looping video */
+
+#header-container {
+    border: 1px solid;
+    padding: 25px 100px 0 50px;
+}
+
+#header-logo {
+    display: inline-block;
+}
+
+#header-list-container {
+    display: inline-block;
+    margin-top: 50px;
+    float: right;
+}
+
+.header-list {
+    display: inline-block;
+    margin: 0 25px 0 25px;
+    float: left;
+}
+
+.header-list a {
+    text-decoration: none;
+    font-size:18px;
+    color: #fff;
+}
+
+/* end of header and header list css */
+
+/* start of middle container css */
+
+#middle-container {
+    font-size: 2.0 rem;
+    width: 100%;
+    height: 783px;
+    color: #fff;
+}
+
+/* end of middle container css */
+
+/* start of lower container css */
+#lower-container {
+    background-color:rgba(249,249,248, 0.9);
+    width: 100%;
+    height: 768px;
+}
+
+/* end of lower container css */
