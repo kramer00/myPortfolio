@@ -89,7 +89,7 @@ video#bgvid {
     background-color: rgba(249,249,248, 0.9);
     padding-top: 150px;
     width: 100%;
-    height: 661px;
+    height:701px;
 }
 
 #lower-main-text {
@@ -109,7 +109,7 @@ video#bgvid {
     border-bottom: 1px solid #DEDEDE;
 }
 
-#bLeft-container {
+.bLeft-container {
     border:1px solid red;
     margin-left:5%;
     float:left;
@@ -117,7 +117,7 @@ video#bgvid {
     width:59%;
 }
 
-#bLeft-container p {
+.bLeft-container p {
     line-height: 205%;
     word-spacing: 5px;
     font-size: 30px;
@@ -194,17 +194,15 @@ video#bgvid {
     text-align: center;
 }
 
-.dot {
-    display: inline-block;
-    font-size: 12px;
-    margin: 0 5px;
-    color: #b48fc2;
-}
-
-.dot-current {
-    color: #7b588e;
-}
 /* end of slider css */
+
+#footer {
+    clear:both;
+    text-align:center;
+    height:30px;
+    width:100%;
+    margin:auto;
+}
 
 /* end of lower container css */
 
