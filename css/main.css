@@ -12,7 +12,7 @@ body {
 /* start main container playing looping viedo */
 video#bgvid {
     position: fixed;
-    top:1px;
+    top: 1px;
     right: 0;
     bottom: 0;
     min-width: 100%;
@@ -26,7 +26,7 @@ video#bgvid {
 /* end of main container playing looping video */
 
 #header-container {
-    background-color:rgba(44,45,47,0.3);
+    background-color: rgba(44,45,47,0.3);
     top: 0;
     left: 0;
     position: absolute;
@@ -50,8 +50,8 @@ video#bgvid {
 
 .header-list a {
     text-decoration: none;
-    font-family:inherit;
-    font-size:24px;
+    font-family: inherit;
+    font-size: 24px;
     color: #fff;
 }
 
@@ -61,8 +61,8 @@ video#bgvid {
 
 #middle-container {
     font-size: 60px;
-    line-height:70%;
-    margin-top:114px;
+    line-height: 70%;
+    margin-top: 114px;
     width: 100%;
     height: 740px;
     color: #fff;
@@ -73,12 +73,12 @@ video#bgvid {
 }
 
 .rowOne {
-    font-weight:normal;
-    font-family:fantasy;
+    font-weight: normal;
+    font-family: fantasy;
 }
 
 .rowTwo {
-    font-weight:600;
+    font-weight: 600;
 }
 
 /* end of middle container css */
@@ -86,28 +86,125 @@ video#bgvid {
 /* start of lower container css */
 
 #lower-container {
-    background-color:rgba(249,249,248, 0.9);
-    padding-top:150px;
+    background-color: rgba(249,249,248, 0.9);
+    padding-top: 150px;
     width: 100%;
     height: 661px;
 }
 
 #lower-main-text {
-    line-height:205%;
-    word-spacing:10px;
-    font-size:45px;
-    color:#444444;
-    margin:auto;
-    width:90%;
+    line-height: 205%;
+    word-spacing: 10px;
+    font-size: 45px;
+    color: #444444;
+    margin: auto;
+    width: 90%;
 }
 
 .highLight {
-    color:#FE5607;
+    color: #FE5607;
 }
 
 #lower-main-text span {
-    border-bottom:1px solid #DEDEDE;
+    border-bottom: 1px solid #DEDEDE;
 }
+
+#bLeft-container {
+    border:1px solid red;
+    margin-left:5%;
+    float:left;
+    height:44%;
+    width:59%;
+}
+
+#bLeft-container p {
+    line-height: 205%;
+    word-spacing: 5px;
+    font-size: 30px;
+    color: #444444;
+    margin: auto;
+    width: 90%;
+}
+
+#next {
+    border-radius:5px;
+    background-color:rgba(249,249,248, 0.4);
+    font-family:Courier;
+    margin-left:5%;
+    font-size:18px;
+    width:25%;
+    height:18%;
+}
+
+#next:hover {
+    background-color:rgb(254,86,7);
+    color:#fff;
+}
+
+#prev {
+    border-radius:5px;
+    background-color:rgba(249,249,248, 0.4);
+    font-family:Courier;
+    margin-left:5%;
+    font-size:18px;
+    width:25%;
+    height:18%;
+}
+
+#prev:hover {
+    background-color:rgb(254,86,7);
+    color:#fff;
+}
+
+#bRight-container {
+    border:1px solid;
+    margin:5px 60px 20px 0;
+    float:right;
+}
+
+
+/* slider css start */
+#frame {
+    width: 350px;
+    height: 200px;
+    padding: 5px;
+    border: 2px solid #FE5607;
+}
+
+#slider-container {
+    width: 350px;
+    height: 200px;
+    position: relative;
+    overflow: hidden;
+}
+
+.slider-img {
+    position: absolute;
+}
+
+.slider-off {
+    left: 380px;
+}
+
+.slider-back {
+    left: -380px;
+}
+
+#slider-dots-container {
+    text-align: center;
+}
+
+.dot {
+    display: inline-block;
+    font-size: 12px;
+    margin: 0 5px;
+    color: #b48fc2;
+}
+
+.dot-current {
+    color: #7b588e;
+}
+/* end of slider css */
 
 /* end of lower container css */
 

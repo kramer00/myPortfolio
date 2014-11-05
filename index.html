@@ -1,11 +1,12 @@
 <!DOCTYPE html>
 <html>
     <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
         <title>Jeff Kramer | Portfolio Home</title>
         <link href="css/main.css" rel="stylesheet" type="text/css">
         <script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
         <script src="http://code.jquery.com/ui/1.11.2/jquery-ui.js"></script>
-        <meta name="viewport" content="width=device-width, initial-scale=1">
+
     </head>
     <body>
         <div id="main-container">
@@ -64,39 +65,25 @@
                             I am driven by a desire to produce <span class="highLight">great work</span> and my <span class="highLight">love for life</span>, <span class="highLight">people</span> and <span class="highLight">possibilities</span>. </span>
                     </blockquote>
                 </div>
+                <div id="bLeft-container">
+                    <p>We work with individuals that create solutions, celebrate entrepreneurship, stand for justice, and believe in the progress of common good.</p>
+                    <br />
+                    <br />
+                    <button id="next" class="btn" type="button">
+                        &laquo;&nbsp;Slide Prev
+                    </button>
+                    <button id="prev" class="btn" type="button">
+                        Slide Next&nbsp;&raquo;
+                    </button>
+                </div>
+                <div id="bRight-container">
+                    <div id="frame">
+                        <div id="slider-container"></div>
+                    </div>
+                </div>
             </div>
             <!-- main-container end -->
         </div>
-
-        <script>
-            // start of script for Work experience scroll and stop
-            $(function() {
-                var headerElement = $("#header-container");
-                var fixedElement = $("#lower-container");
-                var fixedElementPosition = fixedElement.position().top;
-                var headerElementHeight = headerElement.height();
-                
-                $(window).scroll(function() {
-                    var currentWindowTop = $(this).scrollTop();
-                    
-                    if (currentWindowTop == 0) {
-                        headerElement.stop('header').css('position', 'absolute').animate({up:'0', height:headerElementHeight, backgroundColor:'rgba(44,45,47,0.3)'}, {queue:'header'});
-                        headerElement.dequeue('header');
-                    }
-                    else if(currentWindowTop >= fixedElementPosition) {
-                           headerElement.stop('header').css('position', 'fixed').animate({up:'0', height:headerElementHeight, backgroundColor:'rgba(0,0,0,0.8)'}, {queue:'header'});
-                           headerElement.dequeue('header');
-                    }
-                    else {
-                        if(headerElement.is(':visible')) {
-                            headerElement.animate({up:'0', height:'0'}, {queue:'header'});
-                            headerElement.dequeue('header');
-                        }
-                    }
-                    console.log(fixedElementPosition, currentWindowTop);
-                });
-            });
-            // end of script for work experience scroll and stop
-        </script>
+        <script src="js/myscript.js"></script>
     </body>
 </html>
