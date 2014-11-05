@@ -43,7 +43,7 @@ $(function() {
 // end of script for work experience scroll and stop
 
 // start of home page slider js
-var images = ["http://placehold.it/350x200/1&text=1", "http://placehold.it/350x200/3&text=2", "http://placehold.it/350x200/6&text=3", "http://placehold.it/350x200/9&text=4"];
+var images = ["img/me.jpg", "img/meThumbsUp.jpg", "img/meFingerPoint.jpg", "img/meThinking.jpg"];
 
 var current_image_index = 0;
 var slider_container;
