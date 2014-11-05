@@ -3,18 +3,20 @@
     <head>
         <title>Jeff Kramer | Portfolio Home</title>
         <link href="css/main.css" rel="stylesheet" type="text/css">
+        <script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+        <script src="http://code.jquery.com/ui/1.11.2/jquery-ui.js"></script>
         <meta name="viewport" content="width=device-width, initial-scale=1">
     </head>
     <body>
         <div id="main-container">
-            <video autoplay loop poster="polina.jpg" id="bgvid">
-                <source src="video/testHoldPlace.mov" type="video/webm">
+            <video autoplay loop poster="img/meThumbsUp.jpg" id="bgvid" muted>
+                <source src="video/testHoldPlace.mov" type="video/webm"></source>
                 <source src="polina.mp4" type="video/mp4"></source>
             </video>
             <!-- header start -->
             <div id="header-container">
                 <div id="header-logo">
-                    <a href=""><img src="http://dummyimage.com/200x100/b092b0/fff.png&text=Jeff+Kramer+Logo" /></a>
+                    <img src="img/myContactInfo.png" width="150px" height="100px" />
                 </div>
                 <div id="header-list-container">
                     <ul class="style-clean">
@@ -34,39 +36,67 @@
 
             <!-- middle opening text start -->
             <div id="middle-container">
-                <p>
-                    We empower
-                </p>
-                <p>
-                    visionaries
-                </p>
-                <p>
-                    to lead
-                </p>
-                <p>
-                    meaningful
-                </p>
-                <p>
-                    brands
-                </p>
+                <div id="middle-text">
+                    <p class="rowOne">
+                        Don't be afraid
+                    </p>
+                    <p class="rowTwo">
+                        of going slowly,
+                    </p>
+                    <p class="rowOne">
+                        be afraid only
+                    </p>
+                    <p class="rowTwo">
+                        of standing
+                    </p>
+                    <p class="rowOne">
+                        still.
+                    </p>
+                </div>
             </div>
             <!-- middle opening text end -->
 
             <!-- lower-container start -->
             <div id="lower-container">
                 <div id="lower-main-text">
-                    <p>
-                        We are a creative agency devoted to purposeful ventures.
-                    </p>
-                    <p>
-                        We are led by out desire to produce great work and our
-                    </p>
-                    <p>
-                        love for life, people, and possibilities.
-                    </p>
+                    <blockquote>
+                        <span> I am a creative person devoted to <span class="highLight">purposeful ventures</span>.
+                            I am driven by a desire to produce <span class="highLight">great work</span> and my <span class="highLight">love for life</span>, <span class="highLight">people</span> and <span class="highLight">possibilities</span>. </span>
+                    </blockquote>
                 </div>
             </div>
             <!-- main-container end -->
         </div>
+
+        <script>
+            // start of script for Work experience scroll and stop
+            $(function() {
+                var headerElement = $("#header-container");
+                var fixedElement = $("#lower-container");
+                var fixedElementPosition = fixedElement.position().top;
+                var headerElementHeight = headerElement.height();
+                
+                $(window).scroll(function() {
+                    var currentWindowTop = $(this).scrollTop();
+                    
+                    if (currentWindowTop == 0) {
+                        headerElement.stop('header').css('position', 'absolute').animate({up:'0', height:headerElementHeight, backgroundColor:'rgba(249,249,248,0.2)'}, {queue:'header'});
+                        headerElement.dequeue('header');
+                    }
+                    else if(currentWindowTop >= fixedElementPosition) {
+                           headerElement.stop('header').css('position', 'fixed').animate({up:'0', height:headerElementHeight, backgroundColor:'rgb(0,0,0)'}, {queue:'header'});
+                           headerElement.dequeue('header');
+                    }
+                    else {
+                        if(headerElement.is(':visible')) {
+                            headerElement.animate({up:'0', height:'0'}, {queue:'header'});
+                            headerElement.dequeue('header');
+                        }
+                    }
+                    console.log(fixedElementPosition, currentWindowTop);
+                });
+            });
+            // end of script for work experience scroll and stop
+        </script>
     </body>
 </html>

@@ -1,6 +1,7 @@
 html, body {
     margin: 0;
     padding: 0;
+    width: 100%;
 }
 
 body {
@@ -19,56 +20,99 @@ video#bgvid {
     width: auto;
     height: auto;
     z-index: -100;
-    background: url(polina.jpg) no-repeat;
+    background: url("../img/meThumbsUp.jpg") no-repeat;
     background-size: cover;
 }
 /* end of main container playing looping video */
 
 #header-container {
-    border: 1px solid;
-    padding: 25px 100px 0 50px;
+    background-color:rgba(246,246,246,0.3);
+    top: 0;
+    left: 0;
+    position: absolute;
+    width: 100%;
 }
 
 #header-logo {
     display: inline-block;
+    margin: 15px 0 10px 30px;
 }
 
 #header-list-container {
-    display: inline-block;
-    margin-top: 50px;
+    margin: 70px 50px 0 0;
     float: right;
 }
 
 .header-list {
-    display: inline-block;
     margin: 0 25px 0 25px;
     float: left;
 }
 
 .header-list a {
     text-decoration: none;
-    font-size:18px;
+    font-family:inherit;
+    font-size:24px;
     color: #fff;
 }
 
-/* end of header and header list css */
+/* start scroll effect with header */
 
 /* start of middle container css */
 
 #middle-container {
-    font-size: 2.0 rem;
+    font-size: 60px;
+    line-height:70%;
+    margin-top:114px;
     width: 100%;
-    height: 783px;
+    height: 740px;
     color: #fff;
+}
+
+#middle-text {
+    padding: 2% 0 0 12%;
+}
+
+.rowOne {
+    font-weight:normal;
+    font-family:fantasy;
+}
+
+.rowTwo {
+    font-weight:600;
 }
 
 /* end of middle container css */
 
 /* start of lower container css */
+
 #lower-container {
     background-color:rgba(249,249,248, 0.9);
+    padding-top:150px;
     width: 100%;
-    height: 768px;
+    height: 661px;
+}
+
+#lower-main-text {
+    line-height:205%;
+    word-spacing:10px;
+    font-size:45px;
+    color:#444444;
+    margin:auto;
+    width:90%;
+}
+
+.highLight {
+    color:#FE5607;
+}
+
+#lower-main-text span {
+    border-bottom:1px solid #DEDEDE;
 }
 
 /* end of lower container css */
+
+.style-clean {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
