@@ -228,10 +228,8 @@ video#bgvid {
 
 #mini-header-container {
     background-color: rgb(19,19,19);
-    position: absolute;
+    height: 70px;
     width: 100%;
-    left: 0;
-    top: 0;
 }
 
 #mini-header-logo {
@@ -260,7 +258,52 @@ video#bgvid {
 }
 
 #current-pg a {
-    text-decoration: underline;
+    text-decoration: none;
     color: #FE5607;
+}
+
+/* end of mini header section */
+
+/* start of main container contact */
+
+#contact-main-container {
+
+}
+
+#emailLink {
+    border-radius: 10px;
+    position: absolute;
+    overflow: hidden;
+    top: 200px;
+    left: 300px;
+    background: #000;
+    height: 85px;
+    width: 98px;
+}
+
+.fa {
+    width: 98px;
+    height: 85px;
+}
+
+#linkedin {
+    position: absolute;
+    top: 330px;
+    left: 317px;
+}
+
+#linkedin a {
+    text-decoration: none;
+}
+
+#tweet {
+    position: absolute;
+    top: 450px;
+    left: 317px;
+}
+
+#tweet a {
+    color: #319BC2;
+    text-decoration: none;
 }
 

@@ -4,6 +4,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <title>Jeff Kramer | Portfolio Contact Page</title>
         <link href="css/main.css" rel="stylesheet" type="text/css">
+        <link href="font-awesome-4.1.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
         <script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
         <script src="http://code.jquery.com/ui/1.11.2/jquery-ui.js"></script>
 
@@ -31,6 +32,42 @@
             </div>
             <!-- header end -->
             <!-- start of middle container -->
+            <div id="contact-main-container">
+                <div id="emailLink">
+                    <button id="btn-mail" class="fa fa-envelope-o fa-5x"></button>
+                    <form>
+                        <label>Your Name:</label>
+                        <input />
+                        <label placeholder="email@domain.com">Your Email:</label>
+                        <input />
+                        <textarea>Your Message:</textarea>
+                    </form>
+                </div>
+
+                <div id="linkedin">
+                    <a class="fa fa-linkedin-square fa-5x" href="http://www.linkedin.com/pub/jeff-kramer/95/a08/b88" target="_blank"></a>
+                </div>
+                <div id="tweet">
+                    <a class="fa fa-twitter-square fa-5x" href="https://twitter.com/jeffkramer00" target="_blank"></a>
+                </div>
+            </div>
         </div>
+        <script>
+            $(document).ready(function() {
+                $("button").click(function() {
+                    var div = $("#emailLink");
+                    div.animate({
+                        height : '600px',
+                        opacity : '0.4'
+                    }, "slow");
+                    div.animate({
+                        width : '700px',
+                        opacity : '0.8'
+                    }, "slow");
+                    // div.animate({height : '100px', opacity : '0.4'}, "slow");
+                    // div.animate({width : '100px', opacity : '0.8'}, "slow");
+                });
+            });
+        </script>
     </body>
 </html>
