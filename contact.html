@@ -33,14 +33,15 @@
             <!-- header end -->
             <!-- start of middle container -->
             <div id="contact-main-container">
-                <div id="emailLink">
+                <div id="emailForm">
                     <button id="btn-mail" class="fa fa-envelope-o fa-5x"></button>
-                    <form>
-                        <label>Your Name:</label>
-                        <input />
-                        <label placeholder="email@domain.com">Your Email:</label>
-                        <input />
+                    <form role="form" method="post" id="contactForm">
+                        <label for="userName">Your Name:</label>
+                        <input id="userName" name="userName" class="nameField" type="text" />
+                        <label for="email" placeholder="email@domain.com">Your Email:</label>
+                        <input id="email" name="email" class="emailField" type="email" />
                         <textarea>Your Message:</textarea>
+                        <button id="submit-btn" type="submit">Submit</button>
                     </form>
                 </div>
 
@@ -55,7 +56,7 @@
         <script>
             $(document).ready(function() {
                 $("button").click(function() {
-                    var div = $("#emailLink");
+                    var div = $("#emailForm");
                     div.animate({
                         height : '600px',
                         opacity : '0.4'

@@ -270,7 +270,7 @@ video#bgvid {
 
 }
 
-#emailLink {
+#emailForm {
     border-radius: 10px;
     position: absolute;
     overflow: hidden;
@@ -279,6 +279,18 @@ video#bgvid {
     background: #000;
     height: 85px;
     width: 98px;
+}
+
+#userName {
+    border-radius:5px;
+    width:300px;
+    height:40px;
+}
+
+#email {
+    border-radius:5px;
+    width:300px;
+    height:40px;
 }
 
 .fa {
