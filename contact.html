@@ -33,41 +33,59 @@
             <!-- header end -->
             <!-- start of middle container -->
             <div id="contact-main-container">
-                <div id="emailForm">
-                    <button id="btn-mail" class="fa fa-envelope-o fa-5x"></button>
-                    <form role="form" method="post" id="contactForm">
-                        <label for="userName">Your Name:</label>
-                        <input id="userName" name="userName" class="nameField" type="text" />
-                        <label for="email" placeholder="email@domain.com">Your Email:</label>
-                        <input id="email" name="email" class="emailField" type="email" />
-                        <textarea>Your Message:</textarea>
-                        <button id="submit-btn" type="submit">Submit</button>
-                    </form>
+                <div id="top-container">
+                    <div id="emailForm">
+                        <button id="btn-mail" class="fa fa-envelope-o fa-5x"></button>
+                        <form role="form" method="post" id="contactForm">
+                            <h3 id="e-color">email me:<a href="mailto:jeffkramer00@gmail.com"> jeffkramer00@gmail.com</a></h3>
+                            <label class="contact-text" for="userName">Or, Leave me your Name:</label>
+                            <input id="userName" name="userName" class="nameField font-sz" type="text" />
+                            <br />
+                            <label class="contact-text" for="email" placeholder="email@domain.com">Your Email:</label>
+                            <br />
+                            <input id="email" name="email" class="emailField font-sz" type="email" />
+                            <br />
+                            <textarea placeholder="Comment Here:" id="comment-field"></textarea>
+                            <button id="submit-btn" type="submit">
+                                Send
+                            </button>
+                        </form>
+                    </div>
+                    <div id="linkedin">
+                        <a class="fa fa-linkedin-square fa-5x" href="http://www.linkedin.com/pub/jeff-kramer/95/a08/b88" target="_blank"></a>
+                    </div>
+                    <div id="tweet">
+                        <a class="fa fa-twitter-square fa-5x" href="https://twitter.com/jeffkramer00" target="_blank"></a>
+                    </div>
+                    <div id="facebook">
+                        <a class="fa fa-facebook-square fa-5x" href="https://www.facebook.com/jeff.kramer.984?fref=ts" target="_blank"></a>
+                    </div>
                 </div>
-
-                <div id="linkedin">
-                    <a class="fa fa-linkedin-square fa-5x" href="http://www.linkedin.com/pub/jeff-kramer/95/a08/b88" target="_blank"></a>
-                </div>
-                <div id="tweet">
-                    <a class="fa fa-twitter-square fa-5x" href="https://twitter.com/jeffkramer00" target="_blank"></a>
+                <div id="contact-text">
+                    <h2 id="hdr-txt">AND NOW?</h2>
+                    <blockquote id="txt-block">
+                        <p class="last-words">
+                            You can leave my website. However,
+                            I would prefer you contact me through the above links.
+                            Please check back with me.  I am continuing to learn and I will be
+                            updating my website with new content as my skills and knowledge grow.
+                            <br />
+                            Thank you,
+                            <br />
+                            <br />
+                            <span id="mySig"> Jeff Kramer</span>
+                            <br />
+                            <a id="myPhone" href="tel:+19493076774"><span>(949)307-6774</span></a>
+                        </p>
+                    </blockquote>
                 </div>
             </div>
         </div>
         <script>
-            $(document).ready(function() {
-                $("button").click(function() {
-                    var div = $("#emailForm");
-                    div.animate({
-                        height : '600px',
-                        opacity : '0.4'
-                    }, "slow");
-                    div.animate({
-                        width : '700px',
-                        opacity : '0.8'
-                    }, "slow");
-                    // div.animate({height : '100px', opacity : '0.4'}, "slow");
-                    // div.animate({width : '100px', opacity : '0.8'}, "slow");
-                });
+            $('#btn-mail').on('click', function() {
+                $('#contactForm').slideToggle({
+                    'width' : 'toggle'
+                }, 1000);
             });
         </script>
     </body>

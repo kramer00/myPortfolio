@@ -223,7 +223,7 @@ video#bgvid {
 #contact-main-container {
     background-color: #DDDDDD;
     width: 100%;
-    height: 900px;
+    height: 552px;
 }
 
 #mini-header-container {
@@ -243,7 +243,7 @@ video#bgvid {
 }
 
 #mini-header-list-container li {
-    margin: 25px 35px 0 0;
+    margin: 38px 35px 0 0;
     font-size: 20px;
     float: left;
 }
@@ -266,56 +266,175 @@ video#bgvid {
 
 /* start of main container contact */
 
-#contact-main-container {
-
+#top-container {
+    width: 100%;
+    height: 130px;
 }
 
 #emailForm {
     border-radius: 10px;
     position: absolute;
-    overflow: hidden;
-    top: 200px;
-    left: 300px;
+    top: 110px;
+    left: 272px;
     background: #000;
-    height: 85px;
-    width: 98px;
+}
+
+#contactForm {
+    background-color:#000;
+    text-align:center;
+    position: absolute;
+    display:none;
+    top: 83px;
+    left: -38px;
+    color: #fff;
+    width: 575px;
+    height: 335px;
 }
 
 #userName {
-    border-radius:5px;
-    width:300px;
-    height:40px;
+    border-radius: 5px;
+    display:block;
+    margin:auto;
+    width: 350px;
+    height: 30px;
+}
+
+#e-color {
+    text-align: center;
+}
+
+#e-color a {
+    text-decoration: none;
+    color: #fff;
+}
+
+#e-color a:hover {
+    color: #FE5607;
+}
+
+#btn-mail {
+    border-radius: 5px;
+}
+
+#btn-mail:hover {
+    color: #FE5607;
 }
 
 #email {
-    border-radius:5px;
-    width:300px;
-    height:40px;
+    border-radius: 5px;
+    display:block;
+    margin:auto;
+    width: 350px;
+    height: 30px;
+}
+
+.font-sz {
+    padding-left: 8px;
+    font-size: 18px;
+}
+
+#comment-field {
+    border-radius: 5px;
+    font-size:16px;
+    display:block;
+    margin:auto;
+    padding: 4px;
+    width: 350px;
+    height: 100px;
+}
+
+#submit-btn {
+    margin-right: 107px;
+    float: right;
 }
 
 .fa {
     width: 98px;
-    height: 85px;
+    height: 88px;
 }
 
 #linkedin {
+    margin: 0;
+    padding: 0;
     position: absolute;
-    top: 330px;
-    left: 317px;
+    top: 117px;
+    left: 444px;
 }
 
 #linkedin a {
     text-decoration: none;
+    color: #319BC2;
+}
+
+#linkedin a:hover {
+    color: #7FBA00;
 }
 
 #tweet {
     position: absolute;
-    top: 450px;
-    left: 317px;
+    top: 117px;
+    left: 578px;
 }
 
 #tweet a {
     color: #319BC2;
     text-decoration: none;
+}
+
+#tweet a:hover {
+    color: #7FBA00;
+}
+
+#facebook {
+    position: absolute;
+    top: 117px;
+    left: 705px;
+}
+
+#facebook a {
+    color: #319BC2;
+    text-decoration: none;
+}
+
+#facebook a:hover {
+    color: #7FBA00;
+}
+
+#contact-text {
+    display: inline-block;
+    width: 100%;
+    height: 387px;
+    margin: auto;
+}
+
+#hdr-txt {
+    margin-bottom: 5px;
+    text-align: center;
+    font-size: 40px;
+}
+
+#txt-block {
+    word-spacing: 5px;
+    line-height: 30px;
+    margin: auto;
+    height: 150px;
+    width: 527px;
+}
+
+.last-words {
+    margin-top: 0;
+    font-size: 20px;
+}
+
+#mySig {
+    font-family: cursive;
+}
+
+#myPhone {
+    text-decoration: none;
+}
+
+#myPhone:hover {
+    color: #FE5607;
 }
 
