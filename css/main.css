@@ -25,11 +25,15 @@ video#bgvid {
 /* end of main container playing looping video */
 
 #header-container {
-    background-color: rgba(44,45,47,0.3);
+    background-color: rgba(44,45,47,0.4);
     top: 0;
     left: 0;
     position: absolute;
     width: 100%;
+}
+
+#header-container:hover {
+    background-color:rgba(44,45,47,0.8);
 }
 
 #header-logo {
@@ -221,15 +225,18 @@ video#bgvid {
 /* below css is built for contact page */
 
 #contact-main-container {
-    background-color: #DDDDDD;
     width: 100%;
     height: 552px;
 }
 
 #mini-header-container {
-    background-color: rgb(19,19,19);
+    background-color: rgba(19,19,19,0.8);
     height: 70px;
     width: 100%;
+}
+
+#mini-header-container:hover {
+    background-color:rgb(19,19,19);
 }
 
 #mini-header-logo {
@@ -281,6 +288,7 @@ video#bgvid {
 
 #contactForm {
     background-color:#000;
+    border-radius:10px;
     text-align:center;
     position: absolute;
     display:none;
@@ -288,7 +296,7 @@ video#bgvid {
     left: -38px;
     color: #fff;
     width: 575px;
-    height: 335px;
+    height: 340px;
 }
 
 #userName {

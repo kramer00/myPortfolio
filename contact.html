@@ -11,6 +11,10 @@
     </head>
     <body>
         <div id="contact-main-container">
+            <video autoplay loop poster="img/meThumbsUp.jpg" id="bgvid" muted>
+                <source src="video/meLookingAround2.mov" type="video/webm"></source>
+                <source src="polina.mp4" type="video/mp4"></source>
+            </video>
             <!-- header start -->
             <div id="mini-header-container">
                 <div id="mini-header-logo">
@@ -81,12 +85,6 @@
                 </div>
             </div>
         </div>
-        <script>
-            $('#btn-mail').on('click', function() {
-                $('#contactForm').slideToggle({
-                    'width' : 'toggle'
-                }, 1000);
-            });
-        </script>
+        <script src="js/myscript.js"></script>
     </body>
 </html>
