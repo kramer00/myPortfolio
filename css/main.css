@@ -461,3 +461,99 @@ video#bgvid {
 }
 
 /* end of main container contact */
+/* start of about page */
+
+#about-main-container {
+    width:100%;
+    height:100%;
+    margin:0;
+    padding:0;
+}
+
+#page1-container {
+    background-color:rgba(127,186,0,0.2);
+    width:100%;
+    height:800px;
+}
+
+#page2-container {
+    background-color:rgba(109,48,130,0.2);
+    width:100%;
+    height:800px;
+}
+
+#page3-container {
+    background-color:rgba(194,194,194,0.2);
+    width:100%;
+    height:800px;
+}
+
+.quick-scroll {
+    float:right;
+    width:3%;
+    height:100%;
+}
+
+.quick-scroll:hover {
+    background-color:rgba(13,13,13,0.1);
+}
+
+.up-arrow {
+    text-decoration:none;
+    margin:445% 13% 445% 13%;
+    height:4%;
+    width:72%;
+    color:#fff;
+}
+
+.up-arrow:hover {
+    color:#B10007;
+}
+
+.down-arrow {
+    text-decoration:none;
+    margin:445% 13% 445% 13%;
+    height:4%;
+    width:72%;
+    color:#fff;
+}
+
+.down-arrow:hover {
+    color:#B10007;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
