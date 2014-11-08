@@ -1,4 +1,4 @@
-// start of script for Work experience scroll and stop
+// start of script scroll and stop header load
 $(function() {
     var headerElement = $("#header-container");
     var fixedElement = $("#lower-container");
@@ -40,7 +40,7 @@ $(function() {
         console.log(fixedElementPosition, currentWindowTop);
     });
 });
-// end of script for work experience scroll and stop
+// end of script for scroll and stop load header
 
 // start of home page slider js
 var images = ["img/meThumbsUp.jpg", "img/me.jpg", "img/meFingerPoint.jpg", "img/meThinking.jpg"];
@@ -130,6 +130,22 @@ $(function() {
     });
 });
 // end of home page slider js
+
+// start of home page auto scroll to div on click
+
+$('#btn-test').on('click', function scroll_to(div){
+    $('html, body').animate({
+        scrollTop: $('#image-text').offset().top
+    }, 1000);
+});
+
+
+
+
+
+
+// end of home page auto scroll to div on click
+
 /*
 var images = [{
 'url' : 'img/meFingerPoint.jpg',
