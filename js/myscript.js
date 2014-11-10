@@ -1,38 +1,38 @@
 // start of script scroll and stop header load
-$(function() {
+$(function () {
     var headerElement = $("#header-container");
     var fixedElement = $("#lower-container");
     var fixedElementPosition = fixedElement.position().top;
     var headerElementHeight = headerElement.height();
 
-    $(window).scroll(function() {
+    $(window).scroll(function () {
         var currentWindowTop = $(this).scrollTop();
 
         if (currentWindowTop == 0) {
             headerElement.stop('header').css('position', 'absolute').animate({
-                up : '0',
-                height : headerElementHeight,
-                backgroundColor : 'rgba(44,45,47,0.4)'
+                up: '0',
+                height: headerElementHeight,
+                backgroundColor: 'rgba(44,45,47,0.4)'
             }, {
-                queue : 'header'
+                queue: 'header'
             });
             headerElement.dequeue('header');
         } else if (currentWindowTop >= fixedElementPosition) {
             headerElement.stop('header').css('position', 'fixed').animate({
-                up : '0',
-                height : headerElementHeight,
-                backgroundColor : 'rgba(0,0,0,0.8)'
+                up: '0',
+                height: headerElementHeight,
+                backgroundColor: 'rgba(0,0,0,0.8)'
             }, {
-                queue : 'header'
+                queue: 'header'
             });
             headerElement.dequeue('header');
         } else {
             if (headerElement.is(':visible')) {
                 headerElement.animate({
-                    up : '0',
-                    height : '0'
+                    up: '0',
+                    height: '0'
                 }, {
-                    queue : 'header'
+                    queue: 'header'
                 });
                 headerElement.dequeue('header');
             }
@@ -64,7 +64,7 @@ function next_image_index() {
     }
 }
 
-$(function() {
+$(function () {
     slider_container = $('#slider-container');
 
     for (var i = 0; i < images.length; i++) {
@@ -79,22 +79,22 @@ $(function() {
         slider_container.append(img);
     };
 
-    $('#prev').click(function() {
+    $('#prev').click(function () {
 
         var prev_index = prev_image_index();
         var current_image = $(slider_container.find('img.slider-img')[current_image_index]);
         var prev_image = $(slider_container.find('img.slider-img')[prev_index]);
 
         current_image.animate({
-            left : "-=380"
-        }, 1000, function() {
+            left: "-=380"
+        }, 1000, function () {
             current_image.addClass('slider-off').removeClass('current').attr('style', '');
         });
 
         prev_image.addClass('slider-off');
         prev_image.animate({
-            left : "0"
-        }, 1000, function() {
+            left: "0"
+        }, 1000, function () {
             prev_image.removeClass('slider-off').removeClass('current').attr('stlyle', '');
         });
 
@@ -104,22 +104,22 @@ $(function() {
         }
     });
 
-    $('#next').click(function() {
+    $('#next').click(function () {
 
         var next_index = next_image_index();
         var current_image = $(slider_container.find('img.slider-img')[current_image_index]);
         var next_image = $(slider_container.find('img.slider-img')[next_index]);
 
         current_image.animate({
-            left : "380"
-        }, 1000, function() {
+            left: "380"
+        }, 1000, function () {
             current_image.addClass('slider-off').removeClass('current').attr('style', '');
         });
 
         next_image.addClass('slider-back');
         next_image.animate({
-            left : "0"
-        }, 1000, function() {
+            left: "0"
+        }, 1000, function () {
             next_image.removeClass('slider-off').removeClass('slider-back').removeClass('current').attr('stlyle', '');
         });
 
@@ -133,7 +133,7 @@ $(function() {
 
 // start of home page auto scroll to div on click
 
-$('#btn-test').on('click', function scroll_to(div){
+$('#btn-test').on('click', function scroll_to(div) {
     $('html, body').animate({
         scrollTop: $('#image-text').offset().top
     }, 1000);
@@ -246,9 +246,9 @@ current_image_index = images.length - 1;
 
 // contact page start
 
-$('#btn-mail').on('click', function() {
+$('#btn-mail').on('click', function () {
     $('#contactForm').slideToggle({
-        'width' : 'toggle'
+        'width': 'toggle'
     }, 1000);
 });
 // contact page end

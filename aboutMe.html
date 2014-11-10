@@ -1,46 +1,91 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <title>Jeff Kramer | Portfolio Home</title>
-        <link href="css/main.css" rel="stylesheet" type="text/css">
-        <link href="font-awesome-4.1.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
-        <script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
-        <script src="http://code.jquery.com/ui/1.11.2/jquery-ui.js"></script>
 
-    </head>
-    <body>
-        <div id="about-main-container">
-            <video autoplay loop poster="img/meThumbsUp.jpg" id="bgvid" muted>
-                <source src="video/testDrive.mp4" type="video/webm"></source>
-                <source src="polina.mp4" type="video/mp4"></source>
-            </video>
-            <!-- start of page 1 -->
-            <div id="page1-container">
-                <div id="page1-scroll-btn" class="quick-scroll">
-                    <a id="pg1-up-arrow" class="fa fa-arrow-circle-o-up fa-2x up-arrow" type="button"></a>
-                    <a id="pg1-down-arrow" class="fa fa-arrow-circle-o-down fa-2x down-arrow" type="button"></a>
-                </div>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Jeff Kramer | Portfolio Home</title>
+    <link href="css/main.css" rel="stylesheet" type="text/css">
+    <link href="font-awesome-4.1.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+    <script src="http://code.jquery.com/ui/1.11.2/jquery-ui.js"></script>
+
+</head>
+
+<body>
+    <div id="about-main-container">
+        <video autoplay loop poster="img/meThumbsUp.jpg" id="bgvid" muted>
+            <source src="video/testDrive.mp4" type="video/webm"></source>
+            <source src="polina.mp4" type="video/mp4"></source>
+        </video>
+        <!-- start of page 1 -->
+        <div id="page1-container" class="page-container">
+            <div id="page1-scroll-btn" class="quick-scroll">
+                <a id="pg1-up-arrow" class="fa fa-arrow-circle-o-up fa-2x up-arrow" type="button"></a>
+                <a id="pg1-down-arrow" class="fa fa-arrow-circle-o-down fa-2x down-arrow" type="button"></a>
             </div>
-            <!-- end of page 1 -->
-            <!-- start of page 2 -->
-            <div id="page2-container">
-                <div id="page2-scroll-btn" class="quick-scroll">
-                    <a id="pg2-up-arrow" class="fa fa-arrow-circle-o-up fa-2x up-arrow" type="button"></a>
-                    <a id="pg2-down-arrow" class="fa fa-arrow-circle-o-down fa-2x down-arrow" type="button"></a>
-                </div>
-            </div>
-            <!-- end of page 2 -->
-            <!-- start of page 3 -->
-            <div id="page3-container">
-                <div id="page3-scroll-btn" class="quick-scroll">
-                    <a id="pg3-up-arrow" class="fa fa-arrow-circle-o-up fa-2x up-arrow" type="button"></a>
-                    <a id="pg3-down-arrow" class="fa fa-arrow-circle-o-down fa-2x down-arrow" type="button"></a>
-                </div>
-            </div>
-            <!-- end of page 3 -->
         </div>
-        <script>
+        <!-- end of page 1 -->
+        <!-- start of page 2 -->
+        <div id="page2-container" class="page-container">
+            <div id="page2-scroll-btn" class="quick-scroll">
+                <a id="pg2-up-arrow" class="fa fa-arrow-circle-o-up fa-2x up-arrow" type="button"></a>
+                <a id="pg2-down-arrow" class="fa fa-arrow-circle-o-down fa-2x down-arrow" type="button"></a>
+            </div>
+        </div>
+        <!-- end of page 2 -->
+        <!-- start of page 3 -->
+        <div id="page3-container" class="page-container">
+            <div id="page3-scroll-btn" class="quick-scroll">
+                <a id="pg3-up-arrow" class="fa fa-arrow-circle-o-up fa-2x up-arrow" type="button"></a>
+                <a id="pg3-down-arrow" class="fa fa-arrow-circle-o-down fa-2x down-arrow" type="button"></a>
+            </div>
+        </div>
+        <!-- end of page 3 -->
+    </div>
+    <script>
+        function animateBody(e) {
+            console.log(e.data.divId);
+            $('body').animate({
+                scrollTop: $('#' + e.data.divId + ' .quick-scroll').offset().top
+            }, 1000);
+        }
+
+        var someArray = [
+            {
+                btn: 'pg1-up-arrow',
+                container: 'page3-container'
+            },
+            {
+                btn: 'pg1-down-arrow',
+                container: 'page2-container'
+            },
+            {
+                btn: 'pg2-up-arrow',
+                container: 'page1-container'
+            },
+            {
+                btn: 'pg2-down-arrow',
+                container: 'page3-container'
+            },
+            {
+                btn: 'pg3-up-arrow',
+                container: 'page2-container'
+            },
+            {
+                btn: 'pg3-down-arrow',
+                container: 'page1-container'
+            }
+        ]
+
+         $(function () {
+            someArray.forEach(function (row) {
+                $('#' + row.btn).on('click', {
+                    divId: row.container
+                }, animateBody);
+            });
+        });
+
+        /*
             // page 1 auto scroll to page 3
             $('#pg1-up-arrow').on('click', function scroll_to(div) {
                 $('html, body').animate({
@@ -77,6 +122,8 @@
                     scrollTop : $('#page1-scroll-btn').offset().top
                 }, 1000);
             });
-        </script>
-    </body>
+        */
+    </script>
+</body>
+
 </html>
