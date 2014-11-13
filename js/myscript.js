@@ -21,7 +21,7 @@ $(function () {
             headerElement.stop('header').css('position', 'fixed').animate({
                 up: '0',
                 height: headerElementHeight,
-                backgroundColor: 'rgba(0,0,0,0.8)'
+                backgroundColor: 'rgba(44,45,47,0.8)'
             }, {
                 queue: 'header'
             });

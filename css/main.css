@@ -7,16 +7,15 @@ html, body {
 
 #btn-test {
     position:absolute;
-    border-radius:100%;
-    width:50px;
-    height:50px;
-    top:710px;
-    left:628px;
+    color:rgba(255,255,255,0.5);
+    width:auto;
+    height:auto;
+    top:85%;
+    left:49%;
 }
 
 #btn-test:hover {
-    background-color:rgba(19,19,19,0.8);
-    color:rgb(255, 255, 255);
+    color:#fff;
 }
 
 body {
@@ -38,11 +37,19 @@ video#bgvid {
 }
 /* end of main container playing looping video */
 
+#main-container {
+    width:100%;
+    height:100%;
+    margin:0;
+    padding:0;
+}
+
 #header-container {
     background-color: rgba(44,45,47,0.4);
     top: 0;
     left: 0;
     position: absolute;
+    height:16%;
     width: 100%;
 }
 
@@ -52,11 +59,11 @@ video#bgvid {
 
 #header-logo {
     display: inline-block;
-    margin: 15px 0 10px 30px;
+    margin: 1% 0 0% 3%;
 }
 
 #header-list-container {
-    margin: 70px 50px 0 0;
+    margin: 6% 5% 0 0;
     float: right;
 }
 
@@ -81,18 +88,18 @@ video#bgvid {
 /* start of middle container css */
 
 #middle-container {
-    text-align: center;
-    word-spacing: 20px;
-    font-size: 60px;
-    line-height: 50%;
-    margin-top: 114px;
+    text-align: right;
+    word-spacing: 0.2em;
+    font-size: 3em;
+    line-height: 0.6em;
+    margin: 2% -6%;
     width: 100%;
-    height: 740px;
+    height: 100%;
     color: #fff;
 }
 
 #middle-text {
-    padding: 10% 0 0 0;
+    padding-top: 10%;
 }
 
 .rowOne {
@@ -104,25 +111,44 @@ video#bgvid {
     font-weight: 600;
 }
 
+#row-one{
+    margin:3% 4% 2% 0%;
+}
+
+#row-two{
+    margin:0% -2% 4% 0%;
+}
+
+#row-three{
+    margin:0% 1% 2% 0%;
+}
+
+#row-four{
+    margin:0% 0% 4% 0%;
+}
+
+#row-five{
+    margin:0% 3% 0% 0%;
+}
 /* end of middle container css */
 
 /* start of lower container css */
 
 #lower-container {
     background-color: rgba(249,249,248, 0.9);
-    padding-top: 185px;
-    margin-top: 32px;
+    padding-top: 15%;
+    margin-top: 2%;
     width: 100%;
-    height: 660px;
+    height: 84%;
 }
 
 #lower-main-text {
-    line-height: 205%;
-    word-spacing: 10px;
-    font-size: 45px;
+    line-height: 200%;
+    word-spacing: 0.5em;
+    font-size: 2.8em;
     color: #444444;
     margin: auto;
-    width: 95%;
+    width: 93%;
 }
 
 .highLight {
@@ -141,9 +167,9 @@ video#bgvid {
 }
 
 .bLeft-container p {
-    line-height: 205%;
-    word-spacing: 5px;
-    font-size: 30px;
+    line-height: 202%;
+    word-spacing: 0.2em;
+    font-size: 1.9em;
     color: #444444;
     margin: auto;
     width: 90%;
@@ -153,8 +179,8 @@ video#bgvid {
     border-radius: 5px;
     background-color: rgba(249,249,248, 0.4);
     font-family: Courier;
-    margin-left: 5%;
-    font-size: 18px;
+    margin:2% 0 0 5%;
+    font-size: 1.2em;
     width: 25%;
     height: 18%;
 }
@@ -168,8 +194,8 @@ video#bgvid {
     border-radius: 5px;
     background-color: rgba(249,249,248, 0.4);
     font-family: Courier;
-    margin-left: 5%;
-    font-size: 18px;
+    margin:2% 0 0 5%;
+    font-size: 1.2em;
     width: 25%;
     height: 18%;
 }
@@ -210,10 +236,6 @@ video#bgvid {
 
 .slider-back {
     left: -380px;
-}
-
-#slider-dots-container {
-    text-align: center;
 }
 
 /* end of slider css */
@@ -470,6 +492,42 @@ video#bgvid {
     padding:0;
 }
 
+#about-header-container {
+    background-color: rgba(19,19,19,0.8);
+    position:fixed;
+    height: 70px;
+    width: 100%;
+}
+
+#about-header-container:hover {
+    background-color:rgb(19,19,19);
+}
+
+#about-header-logo {
+    margin: 2px 0 0 50px;
+    float: left;
+}
+
+#about-header-list-container {
+    margin-right: 50px;
+    float: right;
+}
+
+#about-header-list-container li {
+    margin: 38px 35px 0 0;
+    font-size: 20px;
+    float: left;
+}
+
+.about-header-list a {
+    text-decoration: none;
+    color: #fff;
+}
+
+.about-header-list a:hover {
+    color: #FE5607;
+}
+
 #page1-container {
     background-color:rgba(127,186,0,1.0);
 }
@@ -515,42 +573,6 @@ video#bgvid {
 .down-arrow:hover {
     color:#B10007;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 .page-container {
     height: 100%;
