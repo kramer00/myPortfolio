@@ -1,90 +1,89 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <title>Jeff Kramer | Portfolio Contact Page</title>
-        <link href="css/main.css" rel="stylesheet" type="text/css">
-        <link href="font-awesome-4.1.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
-        <script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
-        <script src="http://code.jquery.com/ui/1.11.2/jquery-ui.js"></script>
 
-    </head>
-    <body>
-        <div id="contact-main-container">
-            <video autoplay loop poster="img/meThumbsUp.jpg" id="bgvid" muted>
-                <source src="video/meLookingAround2.mov" type="video/webm"></source>
-                <source src="polina.mp4" type="video/mp4"></source>
-            </video>
-            <!-- header start -->
-            <div id="mini-header-container">
-                <div id="mini-header-logo">
-                    <img src="img/myContactInfo.png" width="90px" height="65px" />
-                </div>
-                <div id="mini-header-list-container">
-                    <ul class="style-clean">
-                        <li class="mini-header-list">
-                            <a href="index.html">Home</a>
-                        </li>
-                        <li class="mini-header-list">
-                            <a href="aboutMe.html">About Me</a>
-                        </li>
-                        <li id="current-pg" class="mini-header-list">
-                            <a href="contact.html">Contact</a>
-                        </li>
-                    </ul>
-                </div>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Jeff Kramer | Portfolio Contact Page</title>
+    <link href="css/main.css" rel="stylesheet" type="text/css">
+    <link href="font-awesome-4.1.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+    <script src="http://code.jquery.com/ui/1.11.2/jquery-ui.js"></script>
+
+</head>
+
+<body>
+    <div id="contact-page-main-container">
+        <!-- header start -->
+        <div id="mini-header-container">
+            <div id="mini-header-logo">
+                <img src="img/myContactInfo.png" width="90px" height="65px" />
             </div>
-            <!-- header end -->
-            <!-- start of middle container -->
-            <div id="contact-main-container">
-                <div id="top-container">
-                    <div id="emailForm">
-                        <button id="btn-mail" class="fa fa-envelope-o fa-5x"></button>
-                        <form role="form" method="post" id="contactForm">
-                            <h3 id="e-color">email me:<a href="mailto:jeffkramer00@gmail.com"> jeffkramer00@gmail.com</a></h3>
-                            <label class="contact-text" for="userName">Or, Leave me your Name:</label>
-                            <input id="userName" name="userName" class="nameField font-sz" type="text" />
-                            <br />
-                            <label class="contact-text" for="email" placeholder="email@domain.com">Your Email:</label>
-                            <br />
-                            <input id="email" name="email" class="emailField font-sz" type="email" />
-                            <br />
-                            <textarea placeholder="Comment Here:" id="comment-field"></textarea>
-                            <button id="submit-btn" type="submit">
-                                Send
-                            </button>
-                        </form>
-                    </div>
-                    <div id="linkedin">
-                        <a class="fa fa-linkedin-square fa-5x" href="http://www.linkedin.com/pub/jeff-kramer/95/a08/b88" target="_blank"></a>
-                    </div>
-                    <div id="tweet">
-                        <a class="fa fa-twitter-square fa-5x" href="https://twitter.com/jeffkramer00" target="_blank"></a>
-                    </div>
-                    <div id="github">
-                        <a class="fa fa-github-square fa-5x" href="https://github.com/kramer00" target="_blank"></a>
-                    </div>
-                </div>
-                <div id="contact-text">
-                    <h2 id="hdr-txt">AND NOW?</h2>
-                    <blockquote id="txt-block">
-                        <p class="last-words">
-                            You can leave my website. However,
-                            I would prefer you contact me through the above links.
-                            Please check back with me.  I am continuing to learn and I will be
-                            updating my website with new content as my skills and knowledge grow.
-                            <br />
-                            Thank you,
-                            <br />
-                            <br />
-                            <span id="mySig"> Jeff Kramer</span>
-                            <br />
-                            <span><a id="myPhone" href="tel:+19493076774">(949)307-6774</a></span>
-                        </p>
-                    </blockquote>
-                </div>
+            <div id="mini-header-list-container">
+                <ul class="style-clean">
+                    <li class="mini-header-list">
+                        <a href="index.html">Home</a>
+                    </li>
+                    <li class="mini-header-list">
+                        <a href="aboutMe.html">About Me</a>
+                    </li>
+                    <li id="current-pg" class="mini-header-list">
+                        <a href="contact.html">Contact</a>
+                    </li>
+                </ul>
             </div>
         </div>
-        <script src="js/myscript.js"></script>
-    </body>
+        <!-- header end -->
+        <!-- start of middle container -->
+        <div id="contact-main-container">
+                <div id="emailForm">
+                    <a id="btn-mail" class="fa fa-envelope-o fa-4x"></a>
+                    <form role="form" method="post" id="contactForm">
+                        <h3 id="e-color">email me:<a href="mailto:jeffkramer00@gmail.com"> jeffkramer00@gmail.com</a></h3>
+                        <label class="contact-text" for="userName">Or, Leave me your Name:</label>
+                        <input id="userName" name="userName" class="nameField font-sz" type="text" />
+                        <br />
+                        <label class="contact-text" for="email" placeholder="email@domain.com">Your Email:</label>
+                        <br />
+                        <input id="email" name="email" class="emailField font-sz" type="email" />
+                        <br />
+                        <textarea placeholder="Comment Here:" id="comment-field"></textarea>
+                        <br />
+                        <button id="submit-btn" type="submit">
+                            Send
+                        </button>
+                    </form>
+                </div>
+                <div id="linkedin">
+                    <a class="fa fa-linkedin-square fa-4x" href="http://www.linkedin.com/pub/jeff-kramer/95/a08/b88" target="_blank"></a>
+                </div>
+                <div id="tweet">
+                    <a class="fa fa-twitter-square fa-4x" href="https://twitter.com/jeffkramer00" target="_blank"></a>
+                </div>
+                <div id="github">
+                    <a class="fa fa-github-square fa-4x" href="https://github.com/kramer00" target="_blank"></a>
+                </div>
+            <div id="contact-text">
+                <h2 id="hdr-txt">AND NOW?</h2>
+                <blockquote id="txt-block">
+                    <p class="last-words">
+                        You can leave my website. However, I would prefer you contact me through the above links. Please check back with me. I am continuing to learn and I will be updating my website with new content as my skills and knowledge grow.
+                        <br />Thank you,
+                        <br />
+                        <br />
+                        <span id="mySig"> Jeff Kramer</span>
+                        <br />
+                        <span><a id="myPhone" href="tel:+19493076774">(949)307-6774</a></span>
+                    </p>
+                </blockquote>
+            </div>
+        </div>
+    
+    <script src="js/myscript.js"></script>
+    <script>
+        $(function () {
+            contactPage();
+        });
+    </script>
+</body>
+
 </html>

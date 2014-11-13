@@ -13,28 +13,24 @@
 
 <body>
     <div id="about-main-container">
-        <video autoplay loop poster="img/meThumbsUp.jpg" id="bgvid" muted>
-            <source src="video/testDrive.mp4" type="video/webm"></source>
-            <source src="polina.mp4" type="video/mp4"></source>
-        </video>
-    <div id="about-header-container">
-                <div id="about-header-logo">
-                    <img src="img/myContactInfo.png" width="90px" height="65px" />
-                </div>
-                <div id="about-header-list-container">
-                    <ul class="style-clean">
-                        <li class="about-header-list">
-                            <a href="index.html">Home</a>
-                        </li>
-                        <li id="current-pg" class="about-header-list">
-                            <a href="aboutMe.html">About Me</a>
-                        </li>
-                        <li class="about-header-list">
-                            <a href="contact.html">Contact</a>
-                        </li>
-                    </ul>
-                </div>
+        <div id="about-header-container">
+            <div id="about-header-logo">
+                <img src="img/myContactInfo.png" width="90px" height="65px" />
             </div>
+            <div id="about-header-list-container">
+                <ul class="style-clean">
+                    <li class="about-header-list">
+                        <a href="index.html">Home</a>
+                    </li>
+                    <li id="current-pg" class="about-header-list">
+                        <a href="aboutMe.html">About Me</a>
+                    </li>
+                    <li class="about-header-list">
+                        <a href="contact.html">Contact</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
         <!-- start of page 1 -->
         <div id="page1-container" class="page-container">
             <div id="page1-scroll-btn" class="quick-scroll">
@@ -60,147 +56,12 @@
         </div>
         <!-- end of page 3 -->
     </div>
+    <script src="js/myscript.js">
+    </script>
     <script>
-        function animateBody(e) {
-            console.log(e.data.divId);
-            $('body').animate({
-                scrollTop: $('#' + e.data.divId + ' .quick-scroll').offset().top
-            }, 1000);
-        }
-
-        var someArray = [
-            {
-                btn: 'pg1-up-arrow',
-                container: 'page3-container'
-            },
-            {
-                btn: 'pg1-down-arrow',
-                container: 'page2-container'
-            },
-            {
-                btn: 'pg2-up-arrow',
-                container: 'page1-container'
-            },
-            {
-                btn: 'pg2-down-arrow',
-                container: 'page3-container'
-            },
-            {
-                btn: 'pg3-up-arrow',
-                container: 'page2-container'
-            },
-            {
-                btn: 'pg3-down-arrow',
-                container: 'page1-container'
-            }
-        ]
-
-         $(function () {
-            someArray.forEach(function (row) {
-                $('#' + row.btn).on('click', {
-                    divId: row.container
-                }, animateBody);
-            });
+        $(function () {
+            aboutPage();
         });
-
-        /*
-            // page 1 auto scroll to page 3
-            $('#pg1-up-arrow').on('click', function scroll_to(div) {
-                $('html, body').animate({
-                    scrollTop : $('#page3-scroll-btn').offset().top
-                }, 1000);
-            });
-            // page 1 auto scroll to page 2
-            $('#pg1-down-arrow').on('click', function scroll_to(div) {
-                $('html, body').animate({
-                    scrollTop : $('#page2-scroll-btn').offset().top
-                }, 1000);
-            });
-            // page 2 auto scroll to page 1
-            $('#pg2-up-arrow').on('click', function scroll_to(div) {
-                $('html, body').animate({
-                    scrollTop : $('#page1-scroll-btn').offset().top
-                }, 1000);
-            });
-            // page 2 auto scroll to page 3
-            $('#pg2-down-arrow').on('click', function scroll_to(div) {
-                $('html, body').animate({
-                    scrollTop : $('#page3-scroll-btn').offset().top
-                }, 1000);
-            });
-            // page 3 auto scroll to page 2
-            $('#pg3-up-arrow').on('click', function scroll_to(div) {
-                $('html, body').animate({
-                    scrollTop : $('#page2-scroll-btn').offset().top
-                }, 1000);
-            });
-            // page 3 auto scroll to page 1
-            $('#pg3-down-arrow').on('click', function scroll_to(div) {
-                $('html, body').animate({
-                    scrollTop : $('#page1-scroll-btn').offset().top
-                }, 1000);
-            });
-        */
-        //Set each section's height equals to the window height
-    $('.page-container').height($(window).height());
-    /*set the class 'active' to the first element 
-     this will serve as our indicator*/
-    $('.page-container').first().addClass('active');
-
-    /* handle the mousewheel event together with 
-     DOMMouseScroll to work on cross browser */
-    $(document).on('mousewheel DOMMouseScroll', function (e) {
-        e.preventDefault();//prevent the default mousewheel scrolling
-        var active = $('.page-container.active');
-        //get the delta to determine the mousewheel scrol UP and DOWN
-        var delta = e.originalEvent.detail < 0 || e.originalEvent.wheelDelta > 0 ? 1 : -1;
-        
-        //if the delta value is negative, the user is scrolling down
-        if (delta < 0) {
-            //mousewheel down handler
-            next = active.next();
-            //check if the next section exist and animate the anchoring
-            if (next.length) {
-               /*setTimeout is here to prevent the scrolling animation
-                to jump to the topmost or bottom when 
-                the user scrolled very fast.*/
-                var timer = setTimeout(function () {
-                    /* animate the scrollTop by passing 
-                    the elements offset top value */
-                    $('body, html').animate({
-                        scrollTop: next.offset().top
-                    }, 'slow');
-                    
-                    // move the indicator 'active' class
-                    next.addClass('active')
-                        .siblings().removeClass('active');
-                    
-                    clearTimeout(timer);
-                }, 1000);
-            }
-
-        } else {
-            //mousewheel up handler
-            /*similar logic to the mousewheel down handler 
-            except that we are animate the anchoring 
-            to the previous sibling element*/
-            prev = active.prev();
-
-            if (prev.length) {
-                var timer = setTimeout(function () {
-                    $('body, html').animate({
-                        scrollTop: prev.offset().top
-                    }, 'slow');
-
-                    prev.addClass('active')
-                        .siblings().removeClass('active');
-                    
-                    clearTimeout(timer);
-                }, 1000);
-            }
-
-        }
-    });
     </script>
 </body>
 
